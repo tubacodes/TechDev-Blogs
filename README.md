@@ -89,7 +89,7 @@ Built as a personal learning project, TechDev Blogs focuses on secure authentica
 
 ## Installation
 
-Clone the repository: git clone https://github.com/tubacodes/TechDev Blogs.git
+Clone the repository: [git clone https://github.com/tubacodes/TechDev Blogs.git](https://github.com/tubacodes/TechDev-Blogs.git)
 
 Navigate into the project: cd techdev-blogs
 
