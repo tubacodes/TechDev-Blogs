@@ -1,0 +1,60 @@
+
+.new-post-page h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+  color: #111827;
+  padding: 0 var(--spacing-md);
+  text-align: center;
+}
+
+.new-post-box {
+  padding: var(--spacing-md);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  display: grid;
+  gap: 1.75rem; 
+  background: #ffffff;
+}
+
+
+
+
+
+
+
+.new-post-page{
+  display:flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 800px; 
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  color: #1f2937;
+
+}
+.new-post-page * {
+  box-sizing: border-box;
+
+}
+
+.save-post {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  justify-self: center; 
+  width: max-content;  
+}
+
+.cancel-btn{
+    padding: var(--spacing-sm);
+
+}

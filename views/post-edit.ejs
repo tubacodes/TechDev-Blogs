@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<main class="new-post-page">
+    <h1>Edit Post</h1>
+
+    <%- include("partials/post-form", {
+    post,
+    action: `/posts/${post.id}?_method=PUT`,
+    buttonText: "Update"
+}) %>
+</main>
+
+<%- include("partials/footer.ejs") %>

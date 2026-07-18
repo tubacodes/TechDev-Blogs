@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <section class="hero container">
+            <div class="hero-content">
+                <p class="intro">Developer . Student . Writer</p>
+                <h1 > Where code meets curiosity</h1>
+                <p>Welcome to TechDev Blogs, where developers share their experiences, ideas, and lessons learned while
+                    navigating the ever-changing world of technology. </p>
+            </div>
+        </section>
+
+        <section class="posts container">
+            <div class="headings">
+                <h1>Check Out What's going on in the coding community!</h1>
+                <p>Check out some of the latest posts written by various amazing authors</p>
+            </div>
+            <div class="posts-container">
+            <% if (posts.length> 0) { %>
+                <% for (const post of posts) { %>
+                    <%- include('partials/post-card.ejs', { post }) %>
+                <% } %>
+            <% } else { %>
+
+                <p>No blog posts yet. Be the first to publish one!</p>
+
+            <% } %></div>
+                                   
+                                    <button class="btn btn-load-more" type="button">
+                                      
+                                        <span class="label">Load more</span>
+                                    </button>
+
+
+
+
+        </section>
+    </body>
+    <%-include ('partials/footer.ejs') %>

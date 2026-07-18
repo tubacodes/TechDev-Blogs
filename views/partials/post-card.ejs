@@ -1,0 +1,23 @@
+<a href="/posts/<%= post.id %>" class="post-link">
+<article class="post-card">
+    <% if (post.imageurl) { %>
+       <img
+    src="<%= post.imageurl %>"
+    alt="Cover image for <%= post.title %>"
+    class="post-img"
+    loading="lazy">
+    <% } %>
+    <div class="post-card-content">
+
+    <h2><%= post.title %></h2>
+
+    <% if (post.subheading) { %>
+        <p><%= post.subheading %></p>
+    <% } %>
+
+    <div class="post-meta">
+        <%= post.author_name %>
+        <!-- later: add date, tags -->
+    </div>
+    </div>
+</article></a>

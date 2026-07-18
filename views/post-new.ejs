@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+
+<main class="new-post-page">
+    <h1>Write your post</h1>
+<%- include("partials/post-form", {
+    post: {},
+    action: "/posts",
+    buttonText: "Publish"
+}) %>
+</main>
+
+<%- include('partials/footer.ejs') %>

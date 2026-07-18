@@ -1,0 +1,32 @@
+.intro{
+  font-size: var(--font-size-md);
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--accent-color);
+  font-family: 'DM Serif Display', serif;
+}
+.hero-content h1{
+  font-size: var(--font-size-xl);
+  color: var(--primary-color);
+  font-family: 'DM Serif Display', serif;
+}
+.headings{
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+}
+.headings h2{
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  font-family: 'DM Serif Display', serif;
+ 
+}
+.headings p{
+  font-size: var(--font-size-md);
+  color: var(--muted-text-color);
+  max-width: 800px;
+  margin: var(--spacing-sm) auto;
+}

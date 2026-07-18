@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<main class="dashboard-page">
+    <div class="dashboard-profile">
+        <img src="<%= user.imageurl || '/images/default-avatar.jpeg' %>"
+            alt="<%= user.username %>'s profile" class="profile-pic" />
+            <h1>Welcome back, <%= user.username%></h1>
+     </div>
+    <h2>
+        <%= total %> <%= total === 1 ? 'post' : 'posts' %> Published
+    </h2></div>
+
+    <div class="posts-container">
+        <% if (total === 0) { %>
+            <div class="empty-state">
+                <h3>📝
+
+                    You haven't written any posts yet.
+                </h3>
+                <a href="/posts/new" class="btn">[ Write Your First Post ]</a>
+            </div>
+        <% } else { %>
+           <% for (const post of posts) { %>
+                <%- include('partials/post-card.ejs', { post: post }) %>
+            <% } %>
+        <% } %>
+    </div></div>
+
+</main>
+
+<%- include('partials/footer.ejs') %>

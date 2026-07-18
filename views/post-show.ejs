@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <div class="post">
+            <!-- Post Image -->
+            <img src="<%= post.imageurl %>" alt="<%= post.title %>" class="post-img">
+            <% if (user && post.user_id == user.id) { %>
+
+                <div class="post-options">
+                <form action="/posts/<%= post.id %>/delete?_method=DELETE" method="POST"
+                    onsubmit="return confirm('Are you sure you want to delete this post?');">
+                    <button type="submit" class="btn btn-delete">
+                        Delete Post
+                    </button>
+                </form>
+                <a href="/posts/<%= post.id %>/edit" class="btn btn-edit">Edit</a>
+
+            </div>
+             
+            <% } %>
+            
+            <div class="post-content">
+                <!-- Post Title -->
+                <h1 class="post-heading">
+                    <%= post.title %>
+                </h1>
+
+                <!-- Post Subheading -->
+                <p class="post-subheading">
+                    <%= post.subheading %>
+                </p>
+                <!-- Post Author -->
+                <p class="post-author">
+                    <%= post.author %>
+                </p>
+                <!--    Post content    -->
+                <p class="post-content-text">
+                     <%- post.content.replace(/\r\n|\r|\n/g, '<br>') %>
+                    
+                </p>
+            </div>
+        </div>
+    </body>
+    <%- include('partials/footer.ejs')%>
