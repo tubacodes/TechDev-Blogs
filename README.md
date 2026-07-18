@@ -35,7 +35,7 @@ Built as a personal learning project, TechDev Blogs focuses on secure authentica
 - bcrypt
 
 ## Project Structure
-
+```text
 .
 ├── config
 │   ├── db.js
@@ -85,10 +85,11 @@ Built as a personal learning project, TechDev Blogs focuses on secure authentica
     ├── post-show.ejs
     ├── profile.ejs
     └── register.ejs
+```
 
 ## Installation
 
-Clone the repository: git clone https://github.com/<your-username>/techdev-blogs.git
+Clone the repository: git clone https://github.com/tubacodes/TechDev Blogs.git
 
 Navigate into the project: cd techdev-blogs
 
