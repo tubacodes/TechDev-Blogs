@@ -143,6 +143,8 @@ white-space: nowrap;
 .post-card img{
   border-radius: 0.5rem;
   box-sizing: border-box;
+  max-height: 200px;
+  align-self: center;
 }
 .post-card h2{
   overflow: hidden;

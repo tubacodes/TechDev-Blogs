@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.new-post-box {
+.post-form{
   padding: var(--spacing-md);
   border-radius: 2rem;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);

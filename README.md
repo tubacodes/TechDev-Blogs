@@ -116,17 +116,18 @@ SECRET=
 ## Screenshots
 ### Home Page
 
-Add screenshot here
+![Home](public/images/Screenshots/Main.png)
 
 ### Dashboard
 
-Add screenshot here
+![Dashboard](public/images/Screenshots/Dashboard.png)
 
 ### Create Post
 
-Add screenshot here
+![Create-post](public/images/Screenshots/New-post.png)
 
 ### View Post
+![View-post](public/images/Screenshots/Post.png)
 
 ## What I Learned
 

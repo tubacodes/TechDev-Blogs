@@ -8,7 +8,7 @@ export function getLogin(req, res) {
 }
 
 export function getRegister(req, res) {
-  res.render("register");
+  res.render("register", {title: "Register"});
 }
 
 export async function postRegister(req, res, next) {
