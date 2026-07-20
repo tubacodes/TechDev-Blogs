@@ -6,13 +6,13 @@ import {Pool} from "pg";
 const pool = new Pool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
-
-  database:process.env.DB_DATABASE,
-  password:process.env.DB_PASSWORD,
-})
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
 
 /* Usning pool for now for better performance*/
 // const db = new pg.Client({
@@ -28,6 +28,7 @@ const pool = new Pool({
 //   .catch((err) => console.error("DB connection error:", err.stack));
 
 // export default db;
-
-
+pool.on("connect", async (client) => {
+  await client.query("SET search_path TO public");
+});
 export default pool;

@@ -14,9 +14,9 @@ export async function getHome(req, res) {
       user: req.user || null,
     });
   } catch (err) {
-    console.error("Error in fetching combined home data:", err.stack);
-    res.status(500).render("404.ejs");
-  }
+  console.error(err);
+  throw err;
+}
 }
 
 export async function getDashboard(req, res) {
