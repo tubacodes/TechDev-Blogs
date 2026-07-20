@@ -104,13 +104,13 @@ Visit: http://localhost:3000
 ## Environment Variables
 Create a .env file in the root directory.
 
-PORT=3000
+- PORT=3000
 
-DB_HOST=
-DB_PORT=
-DB_USER=
-DB_PASSWORD=
-DB_DATABASE=
+- DB_HOST=
+- DB_PORT=
+- DB_USER=
+- DB_PASSWORD=
+- DB_DATABASE=
 
 SECRET=
 
@@ -150,4 +150,4 @@ Building this project helped me gain practical experience with:
 
 ## Live Demo
 
-Coming soon.
+ ![Live Website link](https://techdev-blogs.onrender.com)
