@@ -150,4 +150,4 @@ Building this project helped me gain practical experience with:
 
 ## Live Demo
 
- ![Live Website link](https://techdev-blogs.onrender.com)
+ [Live Website link](https://techdev-blogs.onrender.com)
