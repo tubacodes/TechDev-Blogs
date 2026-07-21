@@ -2,6 +2,8 @@ import express from "express";
 import session from "express-session";
 import methodOverride from "method-override";
 import dotenv from "dotenv";
+import connectPgSimple from "connect-pg-simple";
+import pool from "./config/db.js";
 
 import passport from "./config/passport.js";
 import { setUserLocals } from "./middleware/locals.js";
@@ -13,6 +15,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const PgStore = connectPgSimple(session);
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -22,9 +25,20 @@ app.use(methodOverride("_method"));
 
 app.use(
   session({
+    store: new PgStore({
+      pool,
+      tableName: "user_sessions",
+      createTableIfMissing: true,
+    }),
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24, // 24 hours
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+    },
   })
 );
 

@@ -1,53 +1,59 @@
 <header>
-    <div class="logo">
-        <h1 class="logo"><a href="/">Techdev Blogs</a></h1>
+    <div class="menu-top">
+        <div class="logo">
+            <h1 class="logo"><a href="/">Techdev Blogs</a></h1>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </div>
-    <div class="search-box">
-        <form action="/search" method="GET" class="search-form">
-    <input
-        type="search"
-        name="query"
-        class="search-input"
-        placeholder="Search posts..."
-        aria-label="Search posts"
-    >
-</form></div>
-    <div class="navbar">
-
-        <nav>
-            <ul class="navigation">
-                <li><a href="/">Home</a></li>
 
 
 
-                <% if (user) { %>
-                    
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/posts/new">New Post</a></li>
-                    <li>
-                        <div class="profile-container">
-                            
-                            <img src="<%= user.imageurl || '/images/default-avatar.jpeg' %>"
-                                alt="<%= user.username %>'s profile" class="profile-pic" />
-                            <span class="username-label">
-                                <%= user.username %>
-                            </span>
-                        </div>
-                    </li>
 
-                    <li><form action="/logout" method="POST" class="logout-form">
-    <button type="submit" class="logout-btn">
-        Logout
-    </button>
-</form></li>
+    <nav class="navbar" id="main-nav">
+        <div class="search-box">
+            <form action="/search" method="GET" class="search-form">
+                <input type="search" name="query" class="search-input" placeholder="Search posts..."
+                    aria-label="Search posts">
+            </form>
+        </div>
+        <ul class="navigation">
+            <li><a href="/">Home</a></li>
 
-                    <% } else { %>
-    
-                        <li><a href="/login" class="btn-login">Login</a></li>
-                        <li><a href="/register" class="btn-register">Register</a></li>
-                        <% } %>
-            </ul>
 
-        </nav>
-    </div>
+
+            <% if (user) { %>
+
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/posts/new">New Post</a></li>
+                <li>
+                    <div class="profile-container">
+
+                        <img src="<%= user.imageurl || '/images/default-avatar.jpeg' %>"
+                            alt="<%= user.username %>'s profile" class="profile-pic" />
+                        <span class="username-label">
+                            <%= user.username %>
+                        </span>
+                    </div>
+                </li>
+
+                <li>
+                    <form action="/logout" method="POST" class="logout-form">
+                        <button type="submit" class="logout-btn">
+                            Logout
+                        </button>
+                    </form>
+                </li>
+
+                <% } else { %>
+
+                    <li><a href="/login" class="btn-login">Login</a></li>
+                    <li><a href="/register" class="btn-register">Register</a></li>
+                    <% } %>
+        </ul>
+
+    </nav>
 </header>

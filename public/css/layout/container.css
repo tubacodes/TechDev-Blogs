@@ -1,0 +1,21 @@
+/* ==========================================================================
+   PAGE CONTAINERS
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xl) 0;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,75 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  height: 48px;
+
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  background: var(--accent-color);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.label {
+  position: relative;
+  top: -1px;
+}
+
+.btn:hover,
+.a-btn:hover {
+  background: white;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn:active,
+.a-btn:active,
+.form-btn:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
+
+.logout-btn {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logout-btn:hover {
+  background-color: inherit;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.save-post {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  justify-self: center;
+  width: max-content;
+}
+
+.cancel-btn {
+  padding: var(--spacing-sm);
+}

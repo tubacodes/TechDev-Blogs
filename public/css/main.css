@@ -1,0 +1,18 @@
+/* ==========================================================================
+   MAIN ENTRY — import order matters: base -> layout -> components
+   ========================================================================== */
+
+@import url('base.css');
+
+@import url('layout/header.css');
+@import url('layout/navbar.css');
+@import url('layout/footer.css');
+@import url('layout/container.css');
+
+@import url('components/button.css');
+@import url('components/profile.css');
+@import url('components/post-card.css');
+@import url('components/form.css');
+@import url('components/post.css');
+@import url('components/hero.css');
+@import url('components/post-new.css');

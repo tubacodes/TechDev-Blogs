@@ -1,55 +1,59 @@
-/*Post show page*/
-.post{
-  max-width: 800px;
+/* ==========================================================================
+   SINGLE POST PAGE — Mobile-first
+   ========================================================================== */
+
+.post {
   display: flex;
   flex-direction: column;
   padding: var(--spacing-md);
   background-color: #ffffff;
-  margin: var(--spacing-lg);
+  margin: var(--spacing-md) auto;
   border-radius: 2rem;
+  max-width: 20rem;
   justify-self: center;
 }
-.post img{
+
+.post img {
   border-radius: 1.5rem;
   box-sizing: border-box;
   overflow: hidden;
   max-width: fit-content;
 }
-.post-content{
+
+.post-content {
   padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
   line-height: 1.5rem;
-  
 }
-.post-content h1{
+
+.post-content h1 {
   font-family: 'DM Serif Display', serif;
 }
-.post-subheading{
-  
-  color: #7A756F;
+
+.post-subheading {
+  color: var(--muted-text-color);
 }
-.post-author{
+
+.post-author {
   font-weight: 500;
   font-family: 'DM Serif Display', serif;
-  font-size:medium;
-
+  font-size: medium;
 }
+
 .post-options {
   padding: var(--spacing-sm);
   display: flex;
   gap: var(--spacing-md);
   justify-content: flex-end;
-  align-items: center; }
-
+  align-items: center;
+}
 
 .post-options form {
   margin: 0;
   padding: 0;
-
 }
-
 
 .post-options .btn-delete,
 .post-options .btn-edit {
@@ -58,4 +62,11 @@
   cursor: pointer;
   min-width: 100px;
   text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .post {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto;
+  }
 }

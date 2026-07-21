@@ -1,0 +1,51 @@
+/* ==========================================================================
+   PROFILE / AVATAR
+   ========================================================================== */
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-sm);
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color, #3b82f6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.username-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.dashboard-profile .profile-pic {
+  height: 100px;
+  width: 100px;
+}
+
+.dashboard-page h2 {
+  padding: var(--spacing-md);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  font-family: 'DM Serif Display', serif;
+}
