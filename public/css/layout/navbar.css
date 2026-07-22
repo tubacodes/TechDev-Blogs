@@ -74,17 +74,34 @@
 
 @media screen and (min-width: 769px) {
 
-  .navigation,
-  .navbar {
-    width: auto;
-    flex-direction: row;
-  }
+  @media screen and (min-width: 769px) {
+  
 
-  #main-nav {
-    display: flex !important;
+  .menu-top {
+    width: auto;
+    flex-shrink: 0;
   }
 
   #menu-toggle {
     display: none;
   }
+
+  #main-nav {
+    display: flex !important;
+    width: auto;
+  }
+
+  .navigation,
+  .navbar {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    text-align: inherit;
+  }
+
+  .search-box {
+    max-width: 260px;
+    flex-shrink: 0;
+  }
+}
 }

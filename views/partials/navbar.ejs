@@ -9,34 +9,33 @@
             <span class="bar"></span>
         </button>
     </div>
+    <div class="header-right">
+    <div class="search-box">
+                <input type="search" name="query" class="search-input" placeholder="Search posts..."
+                    aria-label="Search posts" id="search-input">
+            <ul id="search-results"></ul>
+    </div>
 
 
 
 
     <nav class="navbar" id="main-nav">
-        <div class="search-box">
-            <form action="/search" method="GET" class="search-form">
-                <input type="search" name="query" class="search-input" placeholder="Search posts..."
-                    aria-label="Search posts">
-            </form>
-        </div>
+        
         <ul class="navigation">
             <li><a href="/">Home</a></li>
 
 
 
             <% if (user) { %>
-
-                <li><a href="/dashboard">Dashboard</a></li>
                 <li><a href="/posts/new">New Post</a></li>
                 <li>
                     <div class="profile-container">
-
+                        <a href="/dashboard">
                         <img src="<%= user.imageurl || '/images/default-avatar.jpeg' %>"
                             alt="<%= user.username %>'s profile" class="profile-pic" />
                         <span class="username-label">
                             <%= user.username %>
-                        </span>
+                        </span></a>
                     </div>
                 </li>
 
@@ -55,5 +54,5 @@
                     <% } %>
         </ul>
 
-    </nav>
+    </nav></div>
 </header>
