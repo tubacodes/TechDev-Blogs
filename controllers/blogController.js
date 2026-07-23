@@ -46,18 +46,17 @@ export function getNewPostForm(req, res) {
 }
 
 export async function createPost(req, res) {
-  const { title, subheading, content, imageurl } = req.body;
+  const { title, subheading, content } = req.body;
   const authorId = req.user.id;
+  const imageurl = req.file ? `/uploads/${req.file.filename}` : null;
 
   try {
-    const result = await pool.query(
+    await pool.query(
       `INSERT INTO blog(title, subheading, content, imageurl, user_id)
-       VALUES($1, $2, $3, $4, $5) RETURNING id`,
+       VALUES($1, $2, $3, $4, $5)`,
       [title, subheading, content, imageurl, authorId]
     );
-    const newId = result.rows[0].id;
-
-res.redirect(`/posts/${newId}`);
+    res.redirect("/");
   } catch (error) {
     console.error("Error inserting post:", error);
     res.status(500).send("Internal Server Error");
@@ -85,7 +84,7 @@ export async function updatePost(req, res) {
   const title = req.body.title || null;
   const subheading = req.body.subheading || null;
   const content = req.body.content || null;
-  const imageurl = req.body.imageurl || null;
+  const imageurl = req.file ? `/uploads/${req.file.filename}` : null;
   const currentUserId = req.user.id || null;
 
   try {
